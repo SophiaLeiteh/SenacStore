@@ -21,13 +21,13 @@
                     
                     
                     <!-- Inicio Produtos -->
-                    {% include 'includes/card_produto1.html' %}
+                {% for produto in produtos %}   
+                     {% include 'includes/card_produto.html' %}
+                {% empty %}
+                    Não há produtos em destaque.
+                {% endfor %}
                     <!-------->
-                    {% include 'includes/card_produto2.html' %}
-                    <!-------->
-                    {% include 'includes/card_produto1.html' %}
-                    <!-------->
-                    {% include 'includes/card_produto2.html' %} 
+                   
                     <!-- termino produtos-->
                 </div>
             </div>
